@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Samples of Patrick Moore's latest development work">
+  <meta name="author" content="Patrick Moore">
+  <title> Patrick Moore </title>
+
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <script src="//use.typekit.net/xmp0mst.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.11/angular.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.11/angular-route.min.js"></script>
+  <script type="text/javascript" src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
+  <script src="js/angular-smooth-scroll.min.js"></script>
+  <script type="text/javascript" src="js/portfolio.js"></script>
+</head>
+<body ng-app="PortfolioApp" ng-controller="MuseumController" id="top">
+
+  <nav data-my-navscroll ng-class="{min:boolChangeClass}">
+    <div class="container">
+      <div class="branding">
+        <a href="/">
+          <svg class="logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve"><g id="Layer_2"><g><g><g><path d="M2.8,7.4v25.5h4V17.6l30.3,1.6V7.4H2.8z M33.1,15.6L6.9,14.2v-3.5h26.2V15.6z"/></g></g><polygon points="33.1,25.9 25.8,25.4 25.8,32.9 21.5,32.9 21.5,25.2 14.8,24.8 14.8,32.9 10.7,32.9 10.7,21 37.2,22.4 37.2,32.8 33.1,32.8     "/><rect x="2.8" y="0" width="34.3" height="3.6"/><rect x="2.8" y="36.4" width="34.3" height="3.6"/></g></g><g id="Layer_4"></g><g id="Layer_1"></g><g id="Layer_3" display="none"></g></svg>
+        </a>
+      </div>
+      <div class="links">
+        <ul>
+          <li><a scroll-to="top">home</a></li>
+          <li><a scroll-to="gallery">gallery</a></li>
+          <li><a scroll-to="about">about</a></li>
+          <li><a scroll-to="contact">contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <img src="images/logo-swatch-lg.jpg" alt="">
+
+      <span>A selection of work by</span>
+      <h1>Patrick E. Moore</h1>
+      <span class="title">{ designer / developer }</span>
+
+      <div class="arrow">
+        <a scroll-to="gallery">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 30" enable-background="new 0 0 60 30" xml:space="preserve"><g id="Layer_2"><polygon points="54.8,1.1 29.7,26.2 5.5,2 4.1,3.4 29.7,29 56.3,2.5   "/></g><g id="Layer_4"></g><g id="Layer_1"></g><g id="Layer_3"></g></svg>
+        </a>
+      </div>
+
+    </div>
+
+
+  </header>
+
+  <main id="gallery">
+    <section class="exhibit-wrapper">
+      <section class="gallery-wrapper">
+        <div class="container text-center">
+          <span ng-repeat="site in sites" ng-click="getSite($index)">{{site.name}}</span>
+        </div>
+      </section>
+
+      <div class="container" ng-hide="url">
+        <div class="col-md-6 col-md-offset-3 text-center intro-wrapper">
+          <p><span class="glyphicon glyphicon-menu-up"></span></p>
+          <p>{ select from the links above }</p>
+        </div>
+      </div>
+
+      <div class="container" ng-show="url">
+        <div class="col-md-6 col-md-offset-3 size-btn-wrapper">
+          <span ng-click="switchSize('desktop')"><i class="fa fa-desktop"></i></span>
+          <span ng-click="switchSize('tablet-p')"><i class="fa fa-tablet"></i></span>
+          <span ng-click="switchSize('tablet')"><i class="fa fa-tablet hrz"></i></span>
+          <span ng-click="switchSize('mobile-p')"><i class="fa fa-mobile"></i></span>
+          <span ng-click="switchSize('mobile')"><i class="fa fa-mobile hrz"></i></span>
+        </div>
+
+        <div class="display clearfix" ng-class="screen">
+          <div class="screen">
+            <iframe ng-src="{{url}}" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <section class="content-wrapper text-center clearfix" ng-show="desc">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h3>{{name}}</h3>
+          <a href="{{url}}" target="_blank">website</a> <a href="{{github}}" target="_blank">github</a>
+          <p>{{desc}}</p>
+        </div>
+      </section>
+
+    </section>
+
+    <section id="about" class="about-wrapper">
+      <div class="container">
+        <div class="col-sm-4 summary">
+          <h3>Summary</h3>
+          <p><strong>Designer</strong> – this title holds a variety of meanings for many people. My definition is all encompassing. Having the title of designer does not confine me to merely visual considerations. Wether writing code, laying out wireframes or sketching a logo I use strategy and problem solving to achieve a successful outcome. I use the principles of design in everything that I do.</p>
+          <p>As a designer I am constantly learning new skills and methodologies to keep up with ever changing technology and innovation. I strive to stay up-to-date with current events and trends in the design/dev community. In my spare time I listen to a variety of industry podcasts and read any relevant articles I can.</p>
+          <p>Currently my focus is on front end and full stack web development. Over the past eight years I have been involved in projects that range from logo creation and branding to CMS theming and email marketing. While working in mostly print design earlier in my career I developed a strong eye for layout, color and typography which I incorporate into my current workflow during development projects.</p>
+          <p>I am passionate about user experience and enjoy the psychology involved with how people interact with and use applications in a digital space.</p>
+        </div>
+
+        <div class="col-sm-7 col-sm-offset-1">
+          <h3>Tech Competencies</h3>
+          <ul class="col-sm-4">
+            <li>Adobe CS6</li>
+            <li>HTML 5</li>
+            <li>CSS 3</li>
+            <li>SASS</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+          </ul>
+          <ul class="col-sm-4">
+            <li>Node.js</li>
+            <li>Angular.js</li>
+            <li>Ruby</li>
+            <li>Ruby on Rails</li>
+            <li>AJAX</li>
+            <li>JSON</li>
+          </ul>
+          <ul class="col-sm-4">
+            <li>Drupal</li>
+            <li>Wordpress</li>
+            <li>MySQL</li>
+            <li>Github</li>
+            <li>Terminal</li>
+          </ul>
+
+          <h3>Experience</h3>
+          <p>
+            <span class="role">Web Development Immersion Student</span>
+            <span class="company">General Assembly</span>
+            <span class="date">November 2014 – Present | Greater Seattle Area</span>
+          </p>
+
+          <p>
+            <span class="role">Web Designer / Developer</span>
+            <span class="company">b2d Marketing</span>
+            <span class="date">June 2012 – November 2014 | Seattle, Washington</span>
+          </p>
+
+          <p>
+            <span class="role">Graphic Designer</span>
+            <span class="company">b2d Marketing</span>
+            <span class="date">April 2010 – June 2012 | Seattle, Washington</span>
+          </p>
+
+          <h3>Education</h3>
+          <p>
+            <span class="company"><strong>Certificate:</strong> Web Technology Solutions</span>
+            <span class="date">November 2014 – Present | Greater Seattle Area</span>
+          </p>
+
+          <p>
+            <span><strong>Certificate</strong> Web Design with Adobe Creative Suite</span>
+            <span class="date">June 2012 – November 2014 | seattle, washington</span>
+          </p>
+
+          <p>
+            <span><strong>Bachlor of Fine Arts in Graphic Design</strong></span>
+            <span class="date">April 2010 – June 2012 | seattle, washington</span>
+          </p>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="contact"></footer>
+</body>
+</html>

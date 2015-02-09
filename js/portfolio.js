@@ -8,16 +8,16 @@ app.controller('MuseumController', ['$scope','$sce', function($scope,$sce){
     {name:'Movie Search App',
     url: $sce.trustAsResourceUrl('https://moviesearchapp.herokuapp.com/'),
     github: 'https://github.com/patemoo/MovieSearchApp',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod obcaecati, quia assumenda cum, quisquam vitae quidem sequi, totam velit aperiam suscipit pariatur ea minus eius quae ipsa ut maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod obcaecati, quia assumenda cum, quisquam vitae quidem sequi, totam velit aperiam suscipit pariatur ea minus eius quae ipsa ut maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod obcaecati, quia assumenda cum, quisquam vitae quidem sequi, totam velit aperiam suscipit pariatur ea minus eius quae ipsa ut maxime.'},
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius doloremque, nemo et natus ducimus enim sed ea, magnam corporis dolores temporibus vero, laborum mollitia blanditiis minima, a cumque qui recusandae.'},
 
     {name:'Pantry 2 Plate',
     url: $sce.trustAsResourceUrl('https://pantry2plate.herokuapp.com'),
     github: 'https://github.com/patemoo/pantry_2_plate',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod obcaecati, quia assumenda cum, quisquam vitae quidem sequi, totam velit aperiam suscipit pariatur ea minus eius quae ipsa ut maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod obcaecati, quia assumenda cum, quisquam vitae quidem sequi, totam velit aperiam suscipit pariatur ea minus eius quae ipsa ut maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod obcaecati, quia assumenda cum, quisquam vitae quidem sequi, totam velit aperiam suscipit pariatur ea minus eius quae ipsa ut maxime.'},
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque reiciendis veritatis possimus esse, deleniti eveniet cumque deserunt nulla dolorum architecto beatae vitae quas harum doloribus nobis ea quasi recusandae rem.'},
     {name:'Listo',
     url: $sce.trustAsResourceUrl('https://getlisto-pm.herokuapp.com'),
     github: 'https://github.com/patemoo/listo',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod obcaecati, quia assumenda cum, quisquam vitae quidem sequi, totam velit aperiam suscipit pariatur ea minus eius quae ipsa ut maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod obcaecati, quia assumenda cum, quisquam vitae quidem sequi, totam velit aperiam suscipit pariatur ea minus eius quae ipsa ut maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod obcaecati, quia assumenda cum, quisquam vitae quidem sequi, totam velit aperiam suscipit pariatur ea minus eius quae ipsa ut maxime.'}
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis possimus culpa fuga ipsum. Nostrum nesciunt sit, natus necessitatibus similique corporis aut nam nobis, quasi vel minima pariatur, qui a nemo?'}
   ]
 
   $scope.getSite = function(i) {

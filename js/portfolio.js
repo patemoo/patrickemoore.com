@@ -2,6 +2,13 @@ var app = angular.module('PortfolioApp', ['ui.bootstrap','ngRoute','smoothScroll
 
 app.controller('MuseumController', ['$scope','$sce', function($scope,$sce){
 
+  $scope.isCollapsed = false;
+
+  $scope.collapseMenu = function() {
+    $scope.isCollapsed = true;
+  }
+
+
   $scope.url = ""
 
   $scope.sites = [

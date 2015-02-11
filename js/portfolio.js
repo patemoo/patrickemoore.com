@@ -20,11 +20,13 @@ app.controller('MuseumController', ['$scope','$sce', function($scope,$sce){
     {name:'Pantry 2 Plate',
     url: $sce.trustAsResourceUrl('https://pantry2plate.herokuapp.com'),
     github: 'https://github.com/patemoo/pantry_2_plate',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque reiciendis veritatis possimus esse, deleniti eveniet cumque deserunt nulla dolorum architecto beatae vitae quas harum doloribus nobis ea quasi recusandae rem.'},
+    desc: 'Pantry 2 Plate is a Node.js app that uses the Yummly api. Users add ingredients to their digital pantry, then search or browse through a curated list of recipes that have been filtered based on pantry items.'},
+
     {name:'Listo',
     url: $sce.trustAsResourceUrl('https://getlisto-pm.herokuapp.com'),
     github: 'https://github.com/patemoo/listo',
     desc: '... '}
+
   ]
 
   $scope.getSite = function(i) {

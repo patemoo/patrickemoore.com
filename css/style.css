@@ -42,9 +42,6 @@ nav {
       list-style: none;
       margin: 0;
       padding: 0; }
-      @media screen and (max-width: 700px) {
-        nav .links ul {
-          padding-top: 8px; } }
       nav .links ul li {
         float: left; }
         nav .links ul li a {
@@ -301,7 +298,17 @@ main {
 footer {
   border-top: 1px solid rgba(51, 75, 96, 0.1);
   background: rgba(51, 75, 96, 0.3);
-  padding: 75px 20px;
-  min-height: 400px; }
+  padding: 20px 0;
+  min-height: 100px; }
+  footer .social {
+    list-style: none;
+    padding: 0; }
+    @media screen and (max-width: 765px) {
+      footer .social {
+        text-align: center; } }
+    footer .social li {
+      display: inline-block;
+      font-size: 30px;
+      padding: 0 20px 0 0; }
 
 /*# sourceMappingURL=style.css.map */

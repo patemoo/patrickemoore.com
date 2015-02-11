@@ -29,13 +29,13 @@
         </a>
       </div>
 
-      <!-- <span class="mobile-menu" ng-click="isCollapsed = !isCollapsed">MENU</span> -->
-      <div class="links" collapse="isCollapsed">
+      <span class="mobile-menu" ng-click="isCollapsed = !isCollapsed">MENU</span>
+      <div class="links collapse navbar-collapse" collapse="isCollapsed">
         <ul>
-          <li><a scroll-to="top">home</a></li>
-          <li><a scroll-to="gallery">gallery</a></li>
-          <li><a scroll-to="about">about</a></li>
-          <li><a scroll-to="contact">contact</a></li>
+          <li><a ng-click="collapseMenu()" scroll-to="top">home</a></li>
+          <li><a ng-click="collapseMenu()" scroll-to="gallery">gallery</a></li>
+          <li><a ng-click="collapseMenu()" scroll-to="about">about</a></li>
+          <li><a ng-click="collapseMenu()" scroll-to="contact">contact</a></li>
         </ul>
       </div>
 
@@ -180,6 +180,17 @@
 
   </main>
 
-  <footer id="contact"></footer>
+  <footer id="contact">
+    <section class="container contact-wrapper">
+      <div class="col-sm-6 col-sm-offset-6 col-md-7 col-md-offset-5">
+        <ul class="social">
+          <li><a href="mailto:patemoo5309@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/patrickemoore" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/patemoo" target="_blank"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://twitter.com/PatMooreDesign" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </section>
+  </footer>
 </body>
 </html>

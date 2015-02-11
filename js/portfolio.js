@@ -2,7 +2,7 @@ var app = angular.module('PortfolioApp', ['ui.bootstrap','ngRoute','smoothScroll
 
 app.controller('MuseumController', ['$scope','$sce', function($scope,$sce){
 
-  $scope.isCollapsed = false;
+  $scope.isCollapsed = true;
 
   $scope.collapseMenu = function() {
     $scope.isCollapsed = true;
@@ -12,10 +12,10 @@ app.controller('MuseumController', ['$scope','$sce', function($scope,$sce){
   $scope.url = ""
 
   $scope.sites = [
-    {name:'Movie Search App',
-    url: $sce.trustAsResourceUrl('https://moviesearchapp.herokuapp.com/'),
-    github: 'https://github.com/patemoo/MovieSearchApp',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius doloremque, nemo et natus ducimus enim sed ea, magnam corporis dolores temporibus vero, laborum mollitia blanditiis minima, a cumque qui recusandae.'},
+    // {name:'Movie Search App',
+    // url: $sce.trustAsResourceUrl('https://moviesearchapp.herokuapp.com/'),
+    // github: 'https://github.com/patemoo/MovieSearchApp',
+    // desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius doloremque, nemo et natus ducimus enim sed ea, magnam corporis dolores temporibus vero, laborum mollitia blanditiis minima, a cumque qui recusandae.'},
 
     {name:'Pantry 2 Plate',
     url: $sce.trustAsResourceUrl('https://pantry2plate.herokuapp.com'),
@@ -24,7 +24,7 @@ app.controller('MuseumController', ['$scope','$sce', function($scope,$sce){
     {name:'Listo',
     url: $sce.trustAsResourceUrl('https://getlisto-pm.herokuapp.com'),
     github: 'https://github.com/patemoo/listo',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis possimus culpa fuga ipsum. Nostrum nesciunt sit, natus necessitatibus similique corporis aut nam nobis, quasi vel minima pariatur, qui a nemo?'}
+    desc: '... '}
   ]
 
   $scope.getSite = function(i) {

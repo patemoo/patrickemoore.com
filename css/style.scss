@@ -40,48 +40,57 @@ nav {
   }
   .mobile-menu {
     display: none;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 768px) {
       display: block;
       float: right;
       padding: 0 5px ;
       font-weight: 700;
       color: $lightblue;
+      margin-top: 10px;
+    }
+    @media screen and (max-width: 340px) {
+      margin-top: 0;
     }
   }
   .links {
     float: right;
-    @media screen and (max-width: 700px) {
-      //clear: both
+    @media screen and (max-width: 768px) {
+      margin: 0;
     }
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
-        @media screen and (max-width: 700px) {
-          //padding-top: 8px;
+        @media screen and (max-width: 768px) {
+          margin-top: 10px;
+          padding: 0;
+        }
+        @media screen and (max-width: 340px) {
+          margin-top: 0;
         }
       li {
         float: left;
-        @media screen and (max-width: 700px) {
-
+        @media screen and (max-width: 768px) {
+          line-height: 110%;
         }
         a {
           display:inline-block;
           padding: 20px 20px 0;
           text-decoration: none;
-          @media screen and (max-width: 700px) {
+          @media screen and (max-width: 768px) {
             padding: 0px 5px;
+            line-height: 100%;
             border-right: 1px solid rgba(51,75,96,.1);
           }
         }
       }
       li:last-child {
         float: left;
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 768px) {
 
         }
         a {
-          @media screen and (max-width: 700px) {
+          @media screen and (max-width: 768px) {
             border-right: none;
           }
         }
@@ -99,7 +108,7 @@ nav.min {
   transition: all 500ms ease;
   .links ul li a {
     padding: 10px 20px 0;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 768px) {
       padding: 0px 5px;
       //border-right: 1px solid rgba(51,75,96,.1);
     }

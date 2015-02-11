@@ -29,32 +29,50 @@ nav {
       fill: #47abc7; }
   nav .mobile-menu {
     display: none; }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 768px) {
       nav .mobile-menu {
         display: block;
         float: right;
         padding: 0 5px;
         font-weight: 700;
-        color: #47abc7; } }
+        color: #47abc7;
+        margin-top: 10px; } }
+    @media screen and (max-width: 340px) {
+      nav .mobile-menu {
+        margin-top: 0; } }
   nav .links {
     float: right; }
+    @media screen and (max-width: 768px) {
+      nav .links {
+        margin: 0; } }
     nav .links ul {
       list-style: none;
       margin: 0;
       padding: 0; }
+      @media screen and (max-width: 768px) {
+        nav .links ul {
+          margin-top: 10px;
+          padding: 0; } }
+      @media screen and (max-width: 340px) {
+        nav .links ul {
+          margin-top: 0; } }
       nav .links ul li {
         float: left; }
+        @media screen and (max-width: 768px) {
+          nav .links ul li {
+            line-height: 110%; } }
         nav .links ul li a {
           display: inline-block;
           padding: 20px 20px 0;
           text-decoration: none; }
-          @media screen and (max-width: 700px) {
+          @media screen and (max-width: 768px) {
             nav .links ul li a {
               padding: 0px 5px;
+              line-height: 100%;
               border-right: 1px solid rgba(51, 75, 96, 0.1); } }
       nav .links ul li:last-child {
         float: left; }
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 768px) {
           nav .links ul li:last-child a {
             border-right: none; } }
 
@@ -68,7 +86,7 @@ nav.min {
   transition: all 500ms ease; }
   nav.min .links ul li a {
     padding: 10px 20px 0; }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 768px) {
       nav.min .links ul li a {
         padding: 0px 5px; } }
 

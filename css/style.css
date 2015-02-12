@@ -102,6 +102,10 @@ header {
       header img {
         margin: 10px 0 20px;
         width: 60%; } }
+    @media screen and (max-height: 500px) {
+      header img {
+        margin: 0 0 20px;
+        width: 50%; } }
   header span {
     display: block;
     font-size: 21px; }
@@ -317,6 +321,19 @@ main {
           -o-transform-origin: 0 0;
           transform-origin: 0 0;
           transition: all 0s linear; }
+    main .exhibit-wrapper .static-display-wrapper img {
+      display: none;
+      width: 60%;
+      max-width: 300px;
+      margin: 0 auto;
+      border: 1px solid #334b60;
+      box-shadow: 3px 3px 3px rgba(51, 75, 96, 0.3); }
+      @media screen and (max-width: 800px) {
+        main .exhibit-wrapper .static-display-wrapper img {
+          display: block; } }
+      @media screen and (max-height: 500px) {
+        main .exhibit-wrapper .static-display-wrapper img {
+          display: block; } }
     main .exhibit-wrapper .content-wrapper {
       padding: 0; }
       main .exhibit-wrapper .content-wrapper a {

@@ -25,7 +25,7 @@ app.controller('MuseumController', ['$scope','$sce', function($scope,$sce){
     {name:'Listo',
     url: $sce.trustAsResourceUrl('https://getlisto-pm.herokuapp.com'),
     github: 'https://github.com/patemoo/listo',
-    desc: 'Users can use Listo to meet others in their neighborhood. An event is created when 4 users in a given area choose the same activity. Foursquare\'s API is used to pull in a meeting location then users communicate over a web sockets chat interface. For accountability a flake score is associated with each user.'}
+    desc: 'Users can use Listo to meet others in their neighborhood. An event is created when 4 users in a given area choose the same activity. Foursquare\'s API is used to pull in a meeting location then users communicate over a web sockets chat interface. For accountability a flake score is associated with each user. Listo is a Ruby on Rails app.'}
 
   ]
 

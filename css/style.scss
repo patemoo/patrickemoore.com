@@ -207,10 +207,19 @@ main {
     }
     .gallery-wrapper {
 
+      @media screen and (max-width: 460px) {
+        margin-bottom: 20px;
+      }
       span {
         display: inline-block;
         padding: 40px 40px 20px;
         cursor: pointer;
+        @media screen and (max-width: 460px) {
+          width: 100%;
+          display: block;
+          padding: 20px 0;
+          border-bottom: 1px solid rgba(51,75,96,.1);
+        }
       }
     }
     .intro-wrapper {

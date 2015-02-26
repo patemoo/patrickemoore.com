@@ -162,10 +162,19 @@ main {
     @media screen and (max-height: 500px) {
       main .exhibit-wrapper {
         background: rgba(51, 75, 96, 0.2); } }
+    @media screen and (max-width: 460px) {
+      main .exhibit-wrapper .gallery-wrapper {
+        margin-bottom: 20px; } }
     main .exhibit-wrapper .gallery-wrapper span {
       display: inline-block;
       padding: 40px 40px 20px;
       cursor: pointer; }
+      @media screen and (max-width: 460px) {
+        main .exhibit-wrapper .gallery-wrapper span {
+          width: 100%;
+          display: block;
+          padding: 20px 0;
+          border-bottom: 1px solid rgba(51, 75, 96, 0.1); } }
     main .exhibit-wrapper .intro-wrapper {
       padding: 200px 0 160px;
       opacity: .6;
